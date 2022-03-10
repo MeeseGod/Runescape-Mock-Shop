@@ -11,3 +11,7 @@ body{
     height: 10vh;
     margin-top: 0;
 }
+
+.navBarElement{
+    margin-right: 10px;
+}
