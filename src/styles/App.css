@@ -1,17 +1,22 @@
-body{
-    margin: 0;
+.productDiv{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
 }
 
-#NavbarContainer{
+.shopContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 99vw;
+}
+
+.shopItemsContainer{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    background-color: green;
-    width: 100vw;
-    height: 10vh;
-    margin-top: 0;
-}
-
-.navBarElement{
-    margin-right: 10px;
+    flex-wrap: wrap;
+    width: 99vw;
 }
