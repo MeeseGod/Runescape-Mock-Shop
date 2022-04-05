@@ -5,8 +5,8 @@ export default function Shop(props){
 
   const [newId, setNewId] = useState(0)
 
-  function getItem(bing){
-    sortThroughInventory(bing.target.parentNode.dataset.itemid);
+  function getItem(item){
+    sortThroughInventory(item.target.parentNode.dataset.itemid);
   }
 
   function sortThroughInventory(id){
