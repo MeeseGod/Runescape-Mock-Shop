@@ -3,40 +3,29 @@ import Navbar from "./Navbar";
 
 export default function Cart(props){
 
-  const [cartItems, setCartItems] = useState([]);
-  let keyCounter = 0;
+  const [countedItems, setCountedItems] = useState([])
 
-  function countItems(){
-    let countedItems = {};
+  function countDuplicates(){
+    let itemCounts = {};
     props.items.forEach(function(x){
-      countedItems[x.itemId] = (countedItems[x.itemId] || 0) + 1;
+      itemCounts[x.itemId] = (itemCounts[x.itemId] || 0) + 1;
       }
     );
-    updateCartArray(countedItems)
+    console.log(itemCounts)
+    displayCountedItems(itemCounts)
   }
 
-  function updateCartArray(countedItems){
-    let newArray = [];
-    for(const property in countedItems){
-      let tempObject = {[property] : countedItems[property]}
-      newArray = [...newArray, tempObject]
+  function displayCountedItems(itemCounts){
+    for(const id in itemCounts){
+      console.log(`${id}: ${itemCounts[id]}`)
+      // I want to put every item count with their appropriate ID into a seperate objects within an Array
+      // Then pull prices from Inventory + name + ID and display this w/ count
+      // Giving us the information needed to tally up the count
     }
-    setCartItems(newArray)
   }
 
-  useEffect(() =>{
-      countItems()
-    }, []
-  )
-    return <div id="cartContainer">
-        <Navbar/>
-        {cartItems.map((item) => {
-          keyCounter = keyCounter + 1
-          return <div className="cartItemDiv" key={keyCounter}> 
-            {item.name}
-            <button onClick={()=>{console.log(cartItems)}}>Ahhh</button>
-          </div>
-        })}
-        
-    </div>
+  return <div id="cartContainer">
+    <Navbar/>
+    <button onClick={() => {console.log(countDuplicates())} }>props.items</button>
+  </div>
 }

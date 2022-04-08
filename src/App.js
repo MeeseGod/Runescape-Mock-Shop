@@ -24,7 +24,7 @@ function App(){
     <Routes>
       <Route path="/" exact element={<Home />} />
       <Route path="/shop" exact element={<Shop items = {Inventory} addItemToCart = {addItemToCart}/>} />
-      <Route path="/cart" exact element={<Cart items = {items}/>} />
+      <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items}/>} />
     </Routes>
     </BrowserRouter>
   </div>
