@@ -17,8 +17,14 @@ export default function Cart(props){
 
   function displayCountedItems(itemCounts){
     for(const id in itemCounts){
+      let tempObject = {}
       console.log(`${id}: ${itemCounts[id]}`)
-      // I want to put every item count with their appropriate ID into a seperate objects within an Array
+      tempObject = {
+        [id] : itemCounts[id]
+      }
+      console.log(props.items)
+      console.log(tempObject)
+      // I want to put every item count with their appropriate ID into seperate objects within an Array
       // Then pull prices from Inventory + name + ID and display this w/ count
       // Giving us the information needed to tally up the count
     }

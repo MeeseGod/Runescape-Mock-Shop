@@ -6,7 +6,7 @@ export default function Shop(props){
   const [newId, setNewId] = useState(0)
 
   function getItem(item){
-    sortThroughInventory(item.target.parentNode.dataset.itemid);
+    sortThroughInventory(item);
   }
 
   function sortThroughInventory(id){
@@ -20,20 +20,14 @@ export default function Shop(props){
     console.log("test")
   }
 
-  function makeId(){
-    setNewId(newId + 1)
-    console.log(newId)
-    return newId
-  }
-
   return(
       <div className="shopContainer">
       <Navbar/>
       <div className="shopItemsContainer">
         {props.items.map((item) => {
-          return <div className="productDiv" key={item.name} data-itemid={item.itemId}> 
+          return <div className="productDiv" key={item.name}> 
             {item.name}
-            <button onClick={getItem}>Add to Cart</button>
+            <button onClick={() => {getItem(item.itemId)}}>Add to Cart</button>
           </div>
         })}
       </div>
