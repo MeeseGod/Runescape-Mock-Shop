@@ -6,16 +6,9 @@ export default function Shop(props){
   const [newId, setNewId] = useState(0)
 
   function getItem(item){
-    sortThroughInventory(item);
+    props.addItemToCart(item)
   }
-
-  function sortThroughInventory(id){
-    let retrievedItem = props.items.filter(item => item.itemId === id)
-    console.log(retrievedItem)
-    props.addItemToCart(retrievedItem)
-    console.log("sortThroughInventory")
-  }
-
+  
   function test(){
     console.log("test")
   }
@@ -27,7 +20,7 @@ export default function Shop(props){
         {props.items.map((item) => {
           return <div className="productDiv" key={item.name}> 
             {item.name}
-            <button onClick={() => {getItem(item.itemId)}}>Add to Cart</button>
+            <button onClick={() => getItem(item)}>Add to Cart</button>
           </div>
         })}
       </div>
