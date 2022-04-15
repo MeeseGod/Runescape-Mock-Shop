@@ -3,10 +3,6 @@ import Navbar from "./Navbar";
 
 export default function Cart(props){
 
-  const [itemCounts, setItemCounts] = useState([])
-
-
-
   function placeHolder(){
     console.log(props.items)
   }

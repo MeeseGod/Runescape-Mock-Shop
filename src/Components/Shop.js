@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 
 export default function Shop(props){
 
-  const [newId, setNewId] = useState(0)
-
   function getItem(item){
     props.addItemToCart(item)
   }

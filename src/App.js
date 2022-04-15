@@ -11,23 +11,20 @@ function App(){
 
   function addItemToCart(item){
     checkForDuplicates(item)
-    setItems([...items, item])
   }
 
   function checkForDuplicates(item){
-    // items.forEach(e => {
-    //   if(item.itemId == e.itemId){
-    //     console.log(e)
-    //   }
-    // })
-
-    if(items.filter(e => e.itemId === item.itemId).length > 0){
-      console.log("Has")
+    items.some(e => {
+      if(e.itemId === item.itemId && e.count){
+        e.count++
+        console.log(e)
+        return
+      }
+    })
+    if(items.filter(e => e.itemId === item.itemId).length < 1){
+      item.count = 1
+      setItems([...items, item])
     }
-    else if(!items.filter(e => e.itemId === item.itemId).length > 0){
-      console.log(item)
-    }
-    // console.log(items.filter( e => e.itemId === item.itemId))
   }
 
   useEffect(() => {
