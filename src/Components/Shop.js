@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import React, { useEffect, useState } from "react";
+import {Link} from "react-router-dom"
 
 export default function Shop(props){
 
@@ -16,8 +16,10 @@ export default function Shop(props){
       <Navbar/>
       <div className="shopItemsContainer">
         {props.items.map((item) => {
-          return <div className="productDiv" key={item.name}> 
+          return <div className="productDiv" key={item.name}>
+            <Link to={`/shop/${item.itemId}`}>
             {item.name}
+            </Link> 
             <button onClick={() => getItem(item)}>Add to Cart</button>
           </div>
         })}

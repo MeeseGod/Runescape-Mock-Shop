@@ -1,0 +1,31 @@
+.cartContainer{
+    width: 100%;
+    height: 90vh;
+}
+.itemsContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr)
+}
+.cartItem{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 20vw;
+    height: 25vh;
+    margin: auto;
+    align-items: center;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+.itemInformation{
+    transform: translateY(50%);
+}
+.imageContainer{
+    height: 10vh;
+    width: auto;
+}
+.itemImage{
+    height: 10vh;
+    width: auto;
+}

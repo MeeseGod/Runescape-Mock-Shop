@@ -3,6 +3,7 @@ import "./styles/App.css"
 import Shop from "./Components/Shop"
 import Home from "./Components/Home"
 import Cart from "./Components/Cart"
+import Product from "./Components/Product"
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -17,7 +18,6 @@ function App(){
     items.some(e => {
       if(e.itemId === item.itemId && e.count){
         e.count++
-        console.log(e)
         return
       }
     })
@@ -25,6 +25,21 @@ function App(){
       item.count = 1
       setItems([...items, item])
     }
+  }
+
+  function setItemCount(item, mode){
+    let tempArray = items;
+    let index = items.indexOf(item);
+    if(mode==="add"){
+      tempArray[index].count++
+    }
+    else if(mode==="subtract" && tempArray[index].count > 1){
+      tempArray[index].count--
+    }
+    else if(mode==="subtract" && tempArray[index].count <= 1){
+      tempArray.splice(tempArray[index], 1)
+    }
+    setItems([...tempArray])
   }
 
   useEffect(() => {
@@ -38,7 +53,8 @@ function App(){
     <Routes>
       <Route path="/" exact element={<Home />} />
       <Route path="/shop" exact element={<Shop items = {Inventory} addItemToCart = {addItemToCart}/>} />
-      <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items}/>} />
+      <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items} setItemCount = {setItemCount}/>} />
+      <Route path="/shop/:id" element={<Product inventory={Inventory} addItemToCart = {addItemToCart}/>}/>
     </Routes>
     </BrowserRouter>
   </div>
