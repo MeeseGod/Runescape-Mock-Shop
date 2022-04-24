@@ -33,11 +33,17 @@
     border-color: black;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .shopItemImage{
     max-width: 150px;
     max-height: 150px;
+    margin: 2px;
+}
+
+.shopItemButton{
+    margin: 2px;
 }
 
 .productInfo{
@@ -47,6 +53,10 @@
     justify-content: center;
     max-width: 100%;
 }
+.shopImageContainer{
+    display: flex;
+    justify-content: center;
+}
 
 @media (orientation: portrait) and (max-width: 600px){
     .shopItemDisplay{
@@ -54,6 +64,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(auto-fill, 1fr);
         width: 100%;
+    }
+    .productDiv{
+        margin-right: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -64,4 +78,9 @@
         grid-template-rows: repeat(auto-fill, 1fr);
         width: 100%;
     }
+    .productDiv{
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
 }

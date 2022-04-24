@@ -22,15 +22,15 @@ export default function Shop(props){
             {props.items.map((item) => {
               return <div className="productDiv" key={item.name}>
                 <Link to={`/shop/${item.itemId}`} className="productLink">
-                  {/* <div className="shopImageContainer"> */}
+                  <div className="shopImageContainer">
                     <img src={item.image} className="shopItemImage"/>
-                  {/* </div> */}
+                  </div>
                   <div className="productInfo">
                     <div>{item.name}</div>
                     <div>Price: {item.price}gp</div>
                   </div>
                 </Link> 
-                <button onClick={() => getItem(item)}>Add to Cart</button>
+                <button className="shopItemButton" onClick={() => getItem(item)}>Add to Cart</button>
               </div>
             })}
           </div>
