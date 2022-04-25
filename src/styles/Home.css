@@ -1,0 +1,14 @@
+.homeContainer{
+    width: 100%;
+    height: 100%;
+}
+.homeDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.homeItemDisplay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

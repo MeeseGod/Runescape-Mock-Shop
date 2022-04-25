@@ -43,7 +43,7 @@ function App(){
   <div className="appContainer">
     <BrowserRouter>
     <Routes>
-      <Route path="/" exact element={<Home />} />
+      <Route path="/" exact element={<Home inventory = {Inventory} />} />
       <Route path="/shop" exact element={<Shop items = {Inventory} addItemToCart = {addItemToCart}/>} />
       <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items} setItemCount = {setItemCount}/>} />
       <Route path="/shop/:id" element={<Product inventory={Inventory} addItemToCart = {addItemToCart}/>}/>
