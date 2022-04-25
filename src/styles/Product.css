@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "Runescape";
+    src: url("RuneScape\ Classic.woff");
+}
+
+body{
+    font-family: "Runescape"
+}
+.centerDisplay{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.itemDisplay{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 98%;
+}
+.productImageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 90vh;
+    border-style: solid;
+    border-color: black;
+    margin-right: 20px;
+}
+.productImage{
+    max-width: 80%;
+    max-height: 80%;
+}
+.productInfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+    width: 40%;
+}
+.productBasicInfo{
+    width: 100%;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-family: "Runescape";
+    font-size: 25px;
+    color: rgb(214, 226, 41);
+}
+.productName{
+    word-wrap: break-word;
+    width: 95%;
+}
+.productPrice{
+    font-size: 20px;
+}
+.productInputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.productItemCountSetters{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.productAddNumber{
+    max-width: 50%;
+}
+
+@media (orientation: portrait) and (max-width: 600px){
+    .productAddNumber{
+        max-width: 30%;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px){
+    .productImageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 80vh;
+        border-style: solid;
+        border-color: black;
+        margin-right: 20px;
+    }   
+}
+
+@media (orientation: landscape) and (max-width: 900px){
+    .productImageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 80vh;
+        border-style: solid;
+        border-color: black;
+        margin-right: 20px;
+    }   
+}

@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 100vw;
+    height: 40px;
+    background-color: black;
+
+}
+.navbarLink{
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+    text-decoration: none;
+    color: rgb(214, 226, 41);
+}
+.navbarImg{
+    height: 70%;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.titlePositioner{
+    display: flex;
+    font-family: "Runescape";
+    color: rgb(214, 226, 41);
+    width: 100%;
+    justify-content: flex-end;
+}
+.titleContainer{
+    margin-right: 10px;
+}

@@ -27,25 +27,17 @@ function App(){
     }
   }
 
-  function setItemCount(item, mode){
+  function setItemCount(item, number){
     let tempArray = items;
     let index = items.indexOf(item);
-    if(mode==="add"){
-      tempArray[index].count++
+    if(number > 0){
+      tempArray[index].count = number;
     }
-    else if(mode==="subtract" && tempArray[index].count > 1){
-      tempArray[index].count--
-    }
-    else if(mode==="subtract" && tempArray[index].count <= 1){
-      tempArray.splice(tempArray[index], 1)
+    else if(number <= 0){
+      tempArray.splice(index, 1)
     }
     setItems([...tempArray])
   }
-
-  useEffect(() => {
-    console.log(items)
-    }
-  )
 
   return (
   <div className="appContainer">
