@@ -13,7 +13,6 @@ export default function Shop(props){
   }
 
   function filterItems(search){
-    console.log(filteredItems)
     let tempArray = items.filter((e) => {
       return e.name.toLowerCase().includes(search.toLowerCase()) || e.category.includes(search.toLowerCase())
     })
@@ -26,14 +25,14 @@ export default function Shop(props){
   }
 
   useEffect(() => {
-      setItems(props.items)
-      setFilteredItems(props.items)
-    }, []
+      setItems(props.inventory)
+      setFilteredItems(props.inventory)
+    }, [props.inventory]
   )
 
   return(
       <div className="shopContainer">
-        <Navbar/>
+        <Navbar items={props.items}/>
         <div className="narrowSearchContainer">
           <input type={"text"} onChange={(e) => filterItems(e.target.value)} className="narrowSearchInput"/>
         </div>
@@ -42,7 +41,7 @@ export default function Shop(props){
               return <div className="productDiv" key={item.name}>
                 <Link to={`/shop/${item.itemId}`} className="productLink">
                   <div className="shopImageContainer">
-                    <img src={item.image} className="shopItemImage"/>
+                    <img src={item.image} alt={`${item.name} from OSRS`} className="shopItemImage"/>
                   </div>
                   <div className="productInfo">
                     <div>{item.name}</div>

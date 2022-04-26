@@ -4,7 +4,7 @@ import Shop from "./Components/Shop"
 import Home from "./Components/Home"
 import Cart from "./Components/Cart"
 import Product from "./Components/Product"
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App(){
@@ -15,10 +15,12 @@ function App(){
   }
 
   function checkForDuplicates(item){
+    let tempArray = items;
     items.some(e => {
       if(e.itemId === item.itemId && e.count){
-        e.count++
-        return
+        tempArray[tempArray.indexOf(e)].count++
+        setItems([...tempArray])
+        return true
       }
     })
     if(items.filter(e => e.itemId === item.itemId).length < 1){
@@ -27,29 +29,38 @@ function App(){
     }
   }
 
-  function setItemCount(item, number){
+  function setItemCount(item, number, add){
     let tempArray = items;
     let index = items.indexOf(item);
-    if(number > 0){
-      tempArray[index].count = number;
+    if(items.some(e => { return e.itemId === item.itemId})){
+      if(number > 0 && add === undefined){
+        tempArray[index].count = number;
+      }
+      else if(number > 0 && add){
+        tempArray[index].count = tempArray[index].count + parseInt(number);
+      }
+      else if(number <= 0){
+        tempArray.splice(index, 1)
+      }
     }
-    else if(number <= 0){
-      tempArray.splice(index, 1)
+    else{
+      item.count = number;
+      tempArray = [...tempArray, item]
     }
     setItems([...tempArray])
   }
 
   return (
-  <div className="appContainer">
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" exact element={<Home inventory = {Inventory} />} />
-      <Route path="/shop" exact element={<Shop items = {Inventory} addItemToCart = {addItemToCart}/>} />
-      <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items} setItemCount = {setItemCount}/>} />
-      <Route path="/shop/:id" element={<Product inventory={Inventory} addItemToCart = {addItemToCart}/>}/>
-    </Routes>
-    </BrowserRouter>
-  </div>
+    <div className="appContainer">
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<Home inventory = {Inventory}  items={items} />} />
+        <Route path="/shop" exact element={<Shop inventory = {Inventory} items={items} addItemToCart = {addItemToCart} />} />
+        <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items} setItemCount = {setItemCount}/>} />
+        <Route path="/shop/:id" element={<Product inventory={Inventory} items={items} setItemCount = {setItemCount}/>}/>
+      </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 
