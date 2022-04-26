@@ -8,6 +8,14 @@ export default function Cart(props){
     props.setItemCount(item, number)
   }
 
+  function calculateTotal(){
+    let result = 0;
+    props.items.forEach(item => {
+      return result = result + (item.price * item.count);
+    });
+    return `Total: ${result}gp`;
+  }
+
   if(props.items.length > 0){
   return (
       <div className="cartContainer">
@@ -37,6 +45,9 @@ export default function Cart(props){
                 </div>
               </div>
             })}
+            <div className="cartTotal">
+              {calculateTotal()}
+            </div>
           </div>
         </div>
       </div>

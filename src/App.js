@@ -18,9 +18,11 @@ function App(){
     let tempArray = items;
     items.some(e => {
       if(e.itemId === item.itemId && e.count){
-        tempArray[tempArray.indexOf(e)].count++
-        setItems([...tempArray])
-        return true
+          if(tempArray[tempArray.indexOf(e)].count < 100){
+          tempArray[tempArray.indexOf(e)].count++
+          setItems([...tempArray])
+          return true
+        }
       }
     })
     if(items.filter(e => e.itemId === item.itemId).length < 1){
@@ -35,9 +37,11 @@ function App(){
     if(items.some(e => { return e.itemId === item.itemId})){
       if(number > 0 && add === undefined){
         tempArray[index].count = number;
+        if(tempArray[index].count >= 99){tempArray[index].count = 99}
       }
       else if(number > 0 && add){
         tempArray[index].count = tempArray[index].count + parseInt(number);
+        if(tempArray[index].count >= 99){tempArray[index].count = 99}
       }
       else if(number <= 0){
         tempArray.splice(index, 1)
@@ -45,6 +49,7 @@ function App(){
     }
     else{
       item.count = number;
+      if(item.count >= 99){item.count = 99}
       tempArray = [...tempArray, item]
     }
     setItems([...tempArray])

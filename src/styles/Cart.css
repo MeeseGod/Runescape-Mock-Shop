@@ -59,6 +59,11 @@
 .itemCount{
     margin-left: 5px;
 }
+.cartTotal{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 5;
+}
 
 .emptyCart{
     display: flex;

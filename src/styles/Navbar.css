@@ -12,6 +12,9 @@
     text-decoration: none;
     color: rgb(214, 226, 41);
 }
+.navbarLink:hover{
+    color: white;
+}
 .navbarImg{
     height: 70%;
     width: auto;
