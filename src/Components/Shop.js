@@ -39,7 +39,7 @@ export default function Shop(props){
           <div className="shopItemDisplay">
             {filteredItems.map((item) => {
               return <div className="productDiv" key={item.name}>
-                <Link to={`/runescape-mock-shop/shop/${item.itemId}`} className="productLink">
+                <Link to={`/shop/${item.itemId}`} className="productLink">
                   <div className="shopImageContainer">
                     <img src={item.image} alt={`${item.name} from OSRS`} className="shopItemImage"/>
                   </div>

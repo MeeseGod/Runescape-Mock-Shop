@@ -21,7 +21,7 @@ export default function Home(props){
                         All you've got to do is pay up the GP through our <s>seedy</s> reliable credit exchange and you'll be leaving in 
                     new gear!
                     </span>
-                    <a className="githubLogoContainer" href="https://github.com/MeeseGod/TOP-Shopping-Cart">
+                    <a className="githubLogoContainer" href="https://github.com/MeeseGod/Runescape-Mock-Shop">
                         <img alt="Github logo that redirects to the app's github repo" className="githubLogo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
                     </a>
                 </div>
