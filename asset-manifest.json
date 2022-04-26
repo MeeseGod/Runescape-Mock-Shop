@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Runescape-Mock-Shop/static/css/main.fc888684.css",
-    "main.js": "/Runescape-Mock-Shop/static/js/main.e8df81fc.js",
-    "static/media/RuneScape Classic.woff": "/Runescape-Mock-Shop/static/media/RuneScape Classic.be363ee3186e3b026fd3.woff",
-    "index.html": "/Runescape-Mock-Shop/index.html",
-    "main.fc888684.css.map": "/Runescape-Mock-Shop/static/css/main.fc888684.css.map",
-    "main.e8df81fc.js.map": "/Runescape-Mock-Shop/static/js/main.e8df81fc.js.map"
+    "main.css": "/runescape-mock-shop/static/css/main.0d92e77f.css",
+    "main.js": "/runescape-mock-shop/static/js/main.e8df81fc.js",
+    "static/media/RuneScape Classic.woff": "/runescape-mock-shop/static/media/RuneScape Classic.be363ee3186e3b026fd3.woff",
+    "index.html": "/runescape-mock-shop/index.html",
+    "main.0d92e77f.css.map": "/runescape-mock-shop/static/css/main.0d92e77f.css.map",
+    "main.e8df81fc.js.map": "/runescape-mock-shop/static/js/main.e8df81fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc888684.css",
+    "static/css/main.0d92e77f.css",
     "static/js/main.e8df81fc.js"
   ]
 }
