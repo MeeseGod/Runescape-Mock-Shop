@@ -4,7 +4,7 @@ import "../styles/Navbar.css"
 
 export default function Navbar(props){
     const [cartCount, setCartCount] = useState(0)
-    
+
     useEffect(() =>{
         function updateCount(){
             let counter = 0;
@@ -24,7 +24,7 @@ export default function Navbar(props){
             <Link to="/cart" className="navbarLink">Cart({cartCount})</Link>
             <div className="titlePositioner">
                 <div className="titleContainer">
-                    MeeseGod's Blackmarket
+                    MeeseGod's Black Market
                 </div>
             </div>
         </div>
