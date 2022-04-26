@@ -14,6 +14,10 @@ function App(){
     checkForDuplicates(item)
   }
 
+  function checkOut(){
+    setItems([]);
+  }
+
   function checkForDuplicates(item){
     let tempArray = items;
     items.some(e => {
@@ -61,7 +65,7 @@ function App(){
       <Routes>
         <Route path="/" exact element={<Home inventory = {Inventory}  items={items} />} />
         <Route path="/shop" exact element={<Shop inventory = {Inventory} items={items} addItemToCart = {addItemToCart} />} />
-        <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items} setItemCount = {setItemCount}/>} />
+        <Route path="/cart" exact element={<Cart inventory = {Inventory} items = {items} setItemCount = {setItemCount} checkOut={checkOut}/>} />
         <Route path="/shop/:id" element={<Product inventory={Inventory} items={items} setItemCount = {setItemCount}/>}/>
       </Routes>
       </BrowserRouter>

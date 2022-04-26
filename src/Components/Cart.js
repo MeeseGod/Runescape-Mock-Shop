@@ -47,6 +47,7 @@ export default function Cart(props){
             })}
             <div className="cartTotal">
               {calculateTotal()}
+              <button className="checkoutButton" onClick={() => props.checkOut()}>Checkout</button>
             </div>
           </div>
         </div>

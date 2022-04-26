@@ -60,9 +60,17 @@
     margin-left: 5px;
 }
 .cartTotal{
+    display: flex;
     margin-left: 10px;
     font-size: 18px;
     font-weight: 5;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkoutButton{
+    margin-right: 10px;
 }
 
 .emptyCart{
