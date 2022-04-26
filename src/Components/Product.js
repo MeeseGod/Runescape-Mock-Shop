@@ -25,11 +25,12 @@ export default function Product(props){
                     <div className="productInfoContainer">
                         <div className="productBasicInfo">
                             <div className="productName">{item.name}</div>
-                            <div className="productPrice">{item.price} GP</div>
+                            <div className="productPrice">{item.price.toLocaleString()} GP</div>
+                            <div className="productCategory">Category: {item.category}</div>
                         </div>
                         <div className="productInputContainer">
                             <div className="productItemCountSetters">
-                                <input type={"number"} className="productAddNumber" defaultValue={1} min={1} onBlur={(e) => {
+                                <input type={"number"} className="productAddNumber" defaultValue={1} min={1} max={99} onBlur={(e) => {
                                     if(e.target.value > 99){e.target.value = 99}
                                     setProductCount(e.target.value)
                                 }}/>

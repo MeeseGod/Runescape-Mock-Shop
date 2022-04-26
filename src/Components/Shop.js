@@ -45,7 +45,7 @@ export default function Shop(props){
                   </div>
                   <div className="productInfo">
                     <div>{item.name}</div>
-                    <div>Price: {item.price}gp</div>
+                    <div>Price: {item.price.toLocaleString()} GP</div>
                   </div>
                 </Link> 
                 <button className="shopItemButton" onClick={() => getItem(item)}>Add to Cart</button>

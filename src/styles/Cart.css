@@ -68,11 +68,9 @@
     justify-content: space-between;
     align-items: center;
 }
-
 .checkoutButton{
     margin-right: 10px;
 }
-
 .emptyCart{
     display: flex;
     align-items: center;

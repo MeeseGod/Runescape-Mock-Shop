@@ -7,7 +7,7 @@ import Product from "./Components/Product"
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-function App(){
+export default function App(){
   const [items, setItems] = useState([])
 
   function addItemToCart(item){
@@ -72,5 +72,3 @@ function App(){
     </div>
   )
 }
-
-export default App

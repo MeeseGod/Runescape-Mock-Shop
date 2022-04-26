@@ -13,7 +13,7 @@ export default function Cart(props){
     props.items.forEach(item => {
       return result = result + (item.price * item.count);
     });
-    return `Total: ${result}gp`;
+    return `Total: ${result.toLocaleString()}gp`;
   }
 
   if(props.items.length > 0){
@@ -33,7 +33,7 @@ export default function Cart(props){
                       {item.name}
                     </div>
                     <div className="priceAndCount">
-                      {`${item.price * item.count}gp`}
+                      {`${(item.price * item.count).toLocaleString()}gp`}
                         <div className="itemCount">
                           <input type={"number"} defaultValue={item.count} min={0} max={99} onBlur={(e) => {
                               if(e.target.value > 99){e.target.value = 99}

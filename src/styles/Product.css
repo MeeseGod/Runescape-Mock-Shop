@@ -11,7 +11,6 @@ body{
     justify-content: center;
     width: 100%;
 }
-
 .itemDisplay{
     display: flex;
     flex-direction: row;
@@ -56,6 +55,12 @@ body{
 .productPrice{
     font-size: 20px;
 }
+.productCategory{
+    margin-top: 5px;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: capitalize;
+}
 .productInputContainer{
     display: flex;
     flex-direction: column;
@@ -68,12 +73,12 @@ body{
     margin-bottom: 10px;
 }
 .productAddNumber{
-    max-width: 50%;
+    width: 200px;
 }
 
 @media (orientation: portrait) and (max-width: 600px){
     .productAddNumber{
-        max-width: 30%;
+        width: 90px;
     }
 }
 
@@ -88,6 +93,9 @@ body{
         border-color: black;
         margin-right: 20px;
     }   
+    .productAddNumber{
+        width: 150px;
+    }
 }
 
 @media (orientation: landscape) and (max-width: 900px){
@@ -100,5 +108,8 @@ body{
         border-style: solid;
         border-color: black;
         margin-right: 20px;
-    }   
+    }  
+    .productAddNumber{
+        width: 150px;
+    }
 }
