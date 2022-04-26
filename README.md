@@ -14,4 +14,6 @@ This mock web store was made for [The Odin Project curriculum](https://www.theod
 Pretty cool, right?
 That's not even including the dancing man on the homepage.
 
+![Dancing default character from runescape](https://i.imgur.com/E1O7mVF.gif)
+
 Inspired by the aesthetics of [Oldschool Runescape](https://oldschool.runescape.wiki/).
