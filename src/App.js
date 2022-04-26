@@ -61,7 +61,7 @@ export default function App(){
 
   return (
     <div className="appContainer">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/runescape-mock-shop" exact element={<Home inventory = {Inventory}  items={items} />} />
         <Route path="/runescape-mock-shop/shop" exact element={<Shop inventory = {Inventory} items={items} addItemToCart = {addItemToCart} />} />
