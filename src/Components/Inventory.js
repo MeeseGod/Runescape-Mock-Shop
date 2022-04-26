@@ -85,21 +85,21 @@ const Inventory = [
     },
     {
         name : "Twisted Bow",
-        price: 5,
+        price: 1100000000,
         category : "weapon",
         image : "https://oldschool.runescape.wiki/images/thumb/Twisted_bow_detail.png/1200px-Twisted_bow_detail.png?7aa10",
         itemId : "013" 
     },
     {
         name : "Ranger Boots",
-        price: 5,
+        price: 43000000,
         category : "armor",
         image : "https://oldschool.runescape.wiki/images/thumb/Ranger_boots_detail.png/1200px-Ranger_boots_detail.png?e421a",
         itemId : "014" 
     },
     {
         name : "Ring of Suffering",
-        price: 5,
+        price: 15000000,
         category : "other",
         image : "https://oldschool.runescape.wiki/images/Ring_of_suffering_detail.png?5ac5c",
         itemId : "015" 
