@@ -16,13 +16,16 @@ a:active{
 .shopSubContainer{
     display: flex;
 }
+.shopItemDisplayContainer{
+    display: grid;
+    justify-content: center;
+}
 .shopItemDisplay{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
     width: 100%;
 }
-
 .narrowSearchContainer{
     display: flex;
     width: 100%;

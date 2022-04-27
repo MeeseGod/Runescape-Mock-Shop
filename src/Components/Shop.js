@@ -36,21 +36,23 @@ export default function Shop(props){
         <div className="narrowSearchContainer">
           <input type={"text"} onChange={(e) => filterItems(e.target.value)} className="narrowSearchInput"/>
         </div>
-          <div className="shopItemDisplay">
-            {filteredItems.map((item) => {
-              return <div className="productDiv" key={item.name}>
-                <Link to={`/shop/${item.itemId}`} className="productLink">
-                  <div className="shopImageContainer">
-                    <img src={item.image} alt={`${item.name} from OSRS`} className="shopItemImage"/>
-                  </div>
-                  <div className="productInfo">
-                    <div>{item.name}</div>
-                    <div>Price: {item.price.toLocaleString()} GP</div>
-                  </div>
-                </Link> 
-                <button className="shopItemButton" onClick={() => getItem(item)}>Add to Cart</button>
-              </div>
-            })}
+          <div className="shopItemDisplayContainer">
+            <div className="shopItemDisplay">
+              {filteredItems.map((item) => {
+                return <div className="productDiv" key={item.name}>
+                  <Link to={`/shop/${item.itemId}`} className="productLink">
+                    <div className="shopImageContainer">
+                      <img src={item.image} alt={`${item.name} from OSRS`} className="shopItemImage"/>
+                    </div>
+                    <div className="productInfo">
+                      <div>{item.name}</div>
+                      <div>Price: {item.price.toLocaleString()} GP</div>
+                    </div>
+                  </Link> 
+                  <button className="shopItemButton" onClick={() => getItem(item)}>Add to Cart</button>
+                </div>
+              })}
+            </div>
           </div>
       </div>
   )
