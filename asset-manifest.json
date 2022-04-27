@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Runescape-Mock-Shop/static/css/main.548addc2.css",
+    "main.css": "/Runescape-Mock-Shop/static/css/main.935dd69a.css",
     "main.js": "/Runescape-Mock-Shop/static/js/main.6e36e12a.js",
     "static/media/RuneScape Classic.woff": "/Runescape-Mock-Shop/static/media/RuneScape Classic.be363ee3186e3b026fd3.woff",
     "index.html": "/Runescape-Mock-Shop/index.html",
-    "main.548addc2.css.map": "/Runescape-Mock-Shop/static/css/main.548addc2.css.map",
+    "main.935dd69a.css.map": "/Runescape-Mock-Shop/static/css/main.935dd69a.css.map",
     "main.6e36e12a.js.map": "/Runescape-Mock-Shop/static/js/main.6e36e12a.js.map"
   },
   "entrypoints": [
-    "static/css/main.548addc2.css",
+    "static/css/main.935dd69a.css",
     "static/js/main.6e36e12a.js"
   ]
 }
