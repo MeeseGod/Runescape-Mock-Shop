@@ -87,4 +87,7 @@
         justify-content: flex-end;
         margin-right: 20%;
     }
+    .cartItem{
+        max-width: 300px;
+    }
 }
